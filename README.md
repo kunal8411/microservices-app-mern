@@ -40,34 +40,7 @@ I created this application over a weekend and learned how to:
 - Manage interactions between microservices.
 - Deploy applications using Docker.
 
-## LinkedIn Post
 
-Here's the LinkedIn post summarizing my project:
-
----
-
-🚀 **Exciting Project Update!** 🚀
-
-I recently developed a full-stack application using Node.js and React, and I took the opportunity to dive into microservices architecture instead of building a monolithic app.
-
-🔧 **Project Highlights:**
-- **Functionality:** Users can add posts, and each post can have comments. Comments containing the word "orange" are automatically rejected.
-- **Microservices:**
-  - **Posts Service:** Manages posts and emits events to an event bus.
-  - **Comments Service:** Manages comments and emits events to the event bus.
-  - **Moderation Service:** Checks comments for the word "orange" and updates the comment status.
-  - **Query Service:** Fetches posts and comments for the frontend, showing their status (pending, approved, rejected).
-  - **Event Bus:** Handles events from all services and dispatches them to the relevant services.
-- **Workflow:**
-  1. A new post or comment triggers an event to the event bus.
-  2. The event bus notifies all services.
-  3. Moderation service checks comments for prohibited words and updates the status.
-  4. The query service updates the status and makes the data available to the frontend.
-- **Deployment:** Each service runs in its own Docker container, making it scalable and maintainable.
-
-This project taught me a lot about creating and managing microservices, and how each microservice interacts with the others. Additionally, I learned about Docker deployment, which significantly streamlined the process.
-
----
 
 ## Getting Started
 
